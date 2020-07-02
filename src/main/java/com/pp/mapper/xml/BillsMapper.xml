@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pp.mapper.BillsMapper">
+<select id="FindAllBills" parameterType="com.pp.pojo.BillsVo" resultType="com.pp.pojo.Bills">
+select b.*,bs.name typename from bills b join billtype bs on b.typeid=bs.id
+<where>
+<!--    <if test="null!=billsVo.getTitle() and billsVo.getTypeid()!=0">-->
+<!--        typeid=#{billsVo.getTypeid()}-->
+<!--    </if>-->
+</where>
+</select>
+<!--    <select id="FindAllBill" >-->
+<!--        select * from bills-->
+
+<!--    </select>-->
+</mapper>
